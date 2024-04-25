@@ -1,0 +1,50 @@
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+figure,
+table,
+th,
+td {
+
+#header {
+  background-color: #0074d9;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+  }
+
