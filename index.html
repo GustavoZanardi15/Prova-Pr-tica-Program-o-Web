@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Notícias do IBGE</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+
+<header id="header">
+    <h1>Portal de Notícias do IBGE</h1>
+    <form action="/search" method="GET">
+        <input type="text" name="Query" placeholder="Buscar notícias por termo">
+    </form>
+    <svg id="filtro-icone"
+         width="20"
+         height="20"
+         fill="#f0f0f0"
+         viewBox="0 0 80 90"
+         focusable="false"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+    </svg>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="tipo-container">
+                <p class="tipo">Tipo:</p>
+                <select id="tipoSelecionado">
+                    <option value="selecione" selected>Selecione</option>
+                    <option value="opcao2">Notícia</option>
+                    <option value="opcao3">Release</option>
+                </select>
+            </div>
+            <div class="tipo-container">
+                <p class="quantidade">Quantidade:</p>
+                <select id="quantidadeSelecionada">
+                    <option value="opcao1">5</option>
+                    <option value="opcao2">10</option>
+                    <option value="opcao3">20</option>
+                </select>
+            </div>
+            <div class="tipo-container">
+                <p class="de">De:</p>
+                <input type="date" id="dia" name="dia">
+            </div>
+            <div class="tipo-container">
+                <p class="ate">Até:</p>
+                <input type="date" id="dia" name="dia">
+            </div>
+            <button class="modal-button">Aplicar</button>
+        </div>
+    </div>
+
+</header>
+
+<main id="main">
+
+</main>
+
+<footer id="footer" aria-label="Rodapé">
+    <p aria-label="Copyright">
+        &copy; Prova Segundo Bimestre. Programação WEB.
+    </p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
