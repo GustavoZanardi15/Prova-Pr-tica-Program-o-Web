@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Notícias do IBGE</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+
+<header id="header">
+    <h1>Portal de Notícias do IBGE</h1>
+    <form action="/search" method="GET">
+        <div class="search-container">
+            <input type="text" name="Query" placeholder="Buscar notícias por termo">
+            <button type="submit"><alt="Buscar">🔍</button>
+        </div>
+    </form>
+    <svg id="filtro-icone"
+         width="20"
+         height="20"
+         fill="#f0f0f0"
+         viewBox="0 0 80 90"
+         focusable="false"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+    </svg>
+    <span id="filtro-ativo" style="display: none;"></span>
+
+    <!-- Modal -->
+    <dialog id="modal" class="modal">
+        <form id="filterForm">
+            <div class="modal-content">
+                <button type="button" class="close" aria-label="Close">&times;</button>
+                <div class="tipo-container">
+                    <label for="tipoSelecionado">Tipo:</label>
+                    <select id="tipoSelecionado" name="tipo">
+                        <option value="selecione" selected>Selecione</option>
+                        <option value="noticia">Notícia</option>
+                        <option value="release">Release</option>
+                    </select>
+                </div>
+                <div class="tipo-container">
+                    <label for="quantidadeSelecionada">Quantidade:</label>
+                    <select id="quantidadeSelecionada" name="quantidade">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div class="tipo-container">
+                    <label for="dataDe">De:</label>
+                    <input type="date" id="dataDe" name="dataDe">
+                </div>
+                <div class="tipo-container">
+                    <label for="dataAte">Até:</label>
+                    <input type="date" id="dataAte" name="dataAte">
+                </div>
+                <button type="button" class="modal-button" id="applyButton">Aplicar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Open Modal Button -->
+</header>
+
+<main id="main">
+</main>
+
+<footer id="footer" aria-label="Rodapé">
+    <p aria-label="Copyright">
+        &copy; Prova Segundo Bimestre. Programação WEB.
+    </p>
+</footer>
+
+<script src="index.js" defer></script>
+</body>
+</html>
