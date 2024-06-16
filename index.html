@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Principal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header>
+        <form id="busca-noticia" onsubmit="buscarNoticia(event)">
+            <h1>
+                Portal de Notícias do IBGE
+            </h1>
+
+            <input type="text" placeholder="Buscar noticia por termo" name="busca">
+        </form>
+        <button form="busca-noticia">
+            🔍
+        </button>
+        <svg onclick=" abrirDialog()" width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
+            xmlns="http://www.w3.org/2000/svg" cursor="pointer">
+            <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+        </svg>
+
+    </header>
+    <main>
+        <dialog id="dialog" close>
+            <span class="close" onclick="fecharDialog()">&times;</span>
+            <form id="filtro-svg" onsubmit="filtroSvg(event)">
+                <div class="dialog-form" >
+                    <div>
+                        <label for="tipo">
+                            Tipo:
+                        </label>
+                        <select name="tipo" id="tipo">
+                            <option value="noticia">Notícia</option>
+                            <option value="release">Release</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="qtd">
+                            Quantidade:
+                        </label>
+                        <select name="qtd" id="qtd">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dialog-form">
+                    <div>
+                        <label for="de">
+                            De:
+                        </label>
+                        <input type="date" name="de" id="de">
+                    </div>
+                    <div>
+                        <label for="ate">
+                            Até:
+                        </label>
+                        <input type="date" name="ate" id="ate">
+                    </div>
+                </div>
+                <button type="submit">Aplicar</button>
+            </form>
+        </dialog>
+        <ul id="lista-noticias">
+        </ul>
+    </main>
+
+    <ul id="paginacao" class="paginacao">
+    </ul>
+
+    <footer>
+        <p>
+            © 2024 Prova de Programação Web
+        </p>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./index.js"></script>
+</html>
